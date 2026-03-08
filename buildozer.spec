@@ -11,8 +11,7 @@ version = 1.0
 
 # --- THE FIX IS HERE ---
 # Added pygame version, hostpython3, and setuptools to stop the clang crash
-requirements = python3,pygame,requests,openssl
-
+requirements = python3,pygame-ce,sdl2,sdl2_image,sdl2_mixer,sdl2_ttf
 orientation = landscape
 fullscreen = 1
 

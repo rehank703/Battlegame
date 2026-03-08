@@ -1,5 +1,5 @@
 name: Build APK
-on: [push, pull_request] # Runs every time you upload code
+on: [push, pull_request]
 
 jobs:
   build:
@@ -9,13 +9,17 @@ jobs:
 
       - name: Build with Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
+        id: buildozer
         with:
           command: buildozer android debug
           buildozer_version: stable
+        # THIS LINE BELOW FIXES THE CHOWN ERROR
+        env:
+          USER: root
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: crown
+          name: crown-battle
           path: bin/*.apk
           

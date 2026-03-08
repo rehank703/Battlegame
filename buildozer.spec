@@ -11,12 +11,12 @@ version = 1.0
 
 # --- THE FIX IS HERE ---
 # Added pygame version, hostpython3, and setuptools to stop the clang crash
-requirements = python3, pygame
+requirements = python3,pygame,requests,openssl
 
 orientation = landscape
 fullscreen = 1
 
-android.permissions = INTERNET,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE
+android.permissions = INTERNET, ACCESS_NETWORK_STATE, BILLING, WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE
 
 android.api = 33
 android.minapi = 21
